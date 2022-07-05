@@ -16,9 +16,10 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                gray: colors.gray,
-                emerald: colors.emerald,
-                indigo: colors.indigo
+                trueGray: colors.trueGray,
+                orange: colors.orange,
+                greenLime: colors.lime,
+                amber: colors.amber
             },
         },
     },
