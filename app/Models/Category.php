@@ -9,13 +9,12 @@ class Category extends Model
 {
     use HasFactory;
     
-    protected $fillabel = ['name','slug','image','icon'];
+    protected $fillable = ['name', 'slug', 'image', 'icon'];
 
   
-
     //Relacion uno a muchos
     public function subcategories(){
-        return $this->hasMany(Subcategories::class); 
+        return $this->hasMany(Subcategory::class); 
     }
 
     public function brands(){
@@ -23,9 +22,9 @@ class Category extends Model
     }
 
     public function products(){
-        return $this->hasManyThrough(Product::class, Subcategories::class);
+        return $this->hasManyThrough(Product::class, Subcategory::class);
     }
 
+   
   
-
 }

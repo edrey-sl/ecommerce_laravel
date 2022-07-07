@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subcategories extends Model
+class Subcategory extends Model
 {
     use HasFactory;
 
@@ -16,6 +16,7 @@ class Subcategories extends Model
         return $this->hasMany(Product::class);
     }
 
+    //Relaion uno a muhos inversa
     public function category(){
         return $this->belongsTo(Category::class);
     }
